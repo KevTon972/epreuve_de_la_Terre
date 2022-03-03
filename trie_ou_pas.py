@@ -5,18 +5,16 @@ import sys
 arg = sys.argv[1:]
 liste = []
 
-#regrouper les arguments dans une liste triée
+#regrouper les arguments dans une liste 
 liste.extend(arg)
 
-#parcourir la liste et verifier si les valeurs sont triées ou non
-for i in liste:
-
-    if i > liste[0]:
-        print("triée!")
-        exit()
-
-    elif i < liste[0]:
-       print("pas triée!")
-       exit()
-else:
-   print("erreur.")
+# verifier si les valeurs sont ordonnées ou non
+try:
+    if liste[0] > liste[1]:
+        print("pas tiée!")
+    elif liste[0] < liste[1]:
+        if liste[1] < liste[2]:
+            if liste[2] < liste[3]:
+             print("triée!")
+except: 
+    print("erreur.")
