@@ -1,11 +1,17 @@
-#!/usr/bin/env python3
-
+'''
+Creez un programme qui affiche la racine carrée d'un entier positif.
+'''
 import sys
 
-try:
-    arg = int(sys.argv[1])
-    resultat = arg ** (1/2)
+def racine_carree():
+    try:
+        arg = int(sys.argv[1])
+        resultat = arg ** (1/2)
 
-    print(int(resultat))
-except:
-    print("entrez un nombre")
+        print(int(resultat))
+    except:
+        print("Entrez un nombre entier positif.")
+
+if __name__ == '__main__':
+    racine_carree()
+    
