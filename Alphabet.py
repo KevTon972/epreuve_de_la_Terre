@@ -2,8 +2,8 @@
 # definir une fonction qui affiche l'alphabet en minuscule
 
 def alpha_minus():
+    alpha= "abcdefghijklmnopqrstuvwxyz"
+    print(alpha)
 
-    alpha= "abcdefghijklmnopqrstuvwxyz\n"
-    
-    for i in alpha:
-        print(i, end='')
+if __name__ == '__main__':
+    alpha_minus()
