@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
-#OU
-#!/usr/bin/python3
- 
-#-*- coding:utf-8 -*-
+'''Creez un programme qui affiche son nom de fichier.'''
 import os
 
-def chemin_du_prog():
-    
-    chemin = os.path.basename('/root/dir/sub/file.ext')
+def file_name():
+    chemin = os.path.basename('/root/dir/sub/file.txt')
+    print(chemin)
 
-    print(chemin) 
-
-chemin_du_prog()
+if __name__ == '__main__':
+    file_name()
