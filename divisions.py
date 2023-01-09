@@ -1,22 +1,25 @@
-#!/usr/bin/env python3
-
+'''
+Creez un programme qui affiche le résultat et le reste
+d'une division entre 2 nombres
+'''
+#!/usr/bin/python3
 import sys
 
-try:
-    arg = int(sys.argv[1])
-    arg2 = int(sys.argv[2])
-    resultat= (arg // arg2)
-    reste =  (arg % arg2)
-except:
-    print("erreur.")
-    quit()
+def division():
+    try:
+        arg = int(sys.argv[1])
+        arg2 = int(sys.argv[2])
+        resultat= arg // arg2
+        reste =  arg % arg2
 
-if len(sys.argv) > 2:
-    if arg > arg2:
+        if arg2 > arg:
+            print("erreur.")
+            return
+
         print(f"resultat: {resultat}")
         print(f"reste: {reste}")
-  
-    elif arg < arg2:
+    except:
         print("erreur.")
 
-
+if __name__ == '__main__':
+    division()
