@@ -1,18 +1,29 @@
-#!/usr/bin/env python3
-
+'''Create a script who takes 3 numbers
+and print the middle value.
+'''
 import sys
 
-arg = sys.argv[1:]
-tri = []
+def find_middle_value(arg):
+    sorted_list = []
+    try:
+        if len(arg) < 3 or len(arg) > 3:
+            print("the list must contained 3 numbers.")
+            return
 
-#regrouper les arguments dans une liste triée
-tri.extend(arg)
-tri.sort()
+        # put numbers in a list and sort the list
+        sorted_list.extend(arg)
+        sorted_list.sort()
 
-#si toutes les valeurs de la liste sont identiques renvoyer "erreur." 
-if all (i == tri[0] for i in tri):
-    print("erreur.")
-    exit()
+        # if all values in the list are the same print an error 
+        if all (i == sorted_list[0] for i in sorted_list):
+            print("numbers should be differents!")
+            return
 
-#afficher la valeur du milieu
-print(tri[1])
+        # print the middle value
+        print(sorted_list[1])
+    except:
+        print("It should be numbers")
+
+if __name__ == '__main__':
+    arg = sys.argv[1:]
+    find_middle_value(arg)
